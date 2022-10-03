@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .App {
+    display: flex;
+    /* flex-direction: row-reverse; */
+  }
+  
+  .body {
+    width: 100%;
+    /* height: 865px; */
+    background-color: #171717;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+  }

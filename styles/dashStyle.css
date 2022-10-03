@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.body-dash {
+    width: 100%;
+    height: 100vh;
+    background-color: #171717;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+    color: #d1d5dc;
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main-content {
+    width: 75%;
+    /* border: 1px solid red; */
+    margin-left: 1.5rem;
+}
+
+.welcome {
+    width: 90%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    /* border: 1px solid green; */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.menu {
+    width: 90%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    /* border: 1px solid brown; */
+}
+
+.exper {
+    height: 100%;
+    width: 330px;
+    /* border: 1px solid greenyellow; */
+}
+
+.logo-1 {
+    width: 100%;
+    height: 30%;
+    /* border: 1px solid blue; */
+}
+
+.logo-1 img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.head-1 {
+    width: 100%;
+    height: 50%;
+    /* border: 1px solid red; */
+    padding-top: 10%;
+}
+
+.head-1 h1 {
+    font-size: x-large;
+    font-weight: bold ;
+}
+
+.exper button {
+    padding: 0.4rem;
+    background-color: #2A62FE;
+    border-radius: 1px;
+}
+
+.lab {
+    height: 100%;
+    width: 330px;
+    /* border: 1px solid salmon; */
+    margin-left: 2rem;
+}
+
+.logo-2 {
+    width: 100%;
+    height: 30%;
+    /* border: 1px solid blue; */
+}
+
+.head-2 {
+    width: 100%;
+    height: 50%;
+    /* border: 1px solid red; */
+    padding-top: 10%;
+}
+
+.logo-2 img {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+}
+
+.head-2 h1 {
+    font-size: x-large;
+    font-weight: bold ;
+}
+
+.lab button {
+    padding: 0.4rem;
+    background-color: #2A62FE;
+    border-radius: 1px;
+}
+
+.user-job {
+    width: 95%;
+    height: 40vh;
+    /* border: 1px solid wheat; */
+}
+
+.notification {
+    width: 25%;
+    /* border: 1px solid blue; */
+    text-align: center;
+}

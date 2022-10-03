@@ -1,11 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.js",
+    "./component/**/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "gray1": " #171717",
+      }
+    },
   },
   plugins: [],
 }
