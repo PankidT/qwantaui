@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
@@ -15,8 +16,10 @@ export default function Home() {
                           <h1>Qwanta experiment</h1>
                       </div>
                       
-                      <Link href="Experiment/Experiment">
-                        <button>Lunch Experiment</button>
+                      <Link href="Experiment">
+                        <motion.button className='bg-gradient-to-r from-violet-500 to-fuchsia-500' whileHover={{ scale:1.1}}>
+                            Lunch Experiment
+                        </motion.button>
                       </Link>
 
                   </div>
@@ -30,7 +33,9 @@ export default function Home() {
                       </div>
 
                       <Link href="/Lab">
-                          <button>Lunch Lab</button>
+                          <motion.button className='bg-gradient-to-r from-violet-500 to-fuchsia-500 mb-5' whileHover={{ scale:1.1 }}>
+                            Lunch Lab
+                          </motion.button>
                       </Link>
 
                   </div>

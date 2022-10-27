@@ -1,15 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./pages/**/*.js",
-    "./component/**/*.js",
-  ],
+  content: ["./pages/**/*.js", "./component/**/*.js"],
   theme: {
     extend: {
       colors: {
-        "gray1": " #171717",
-      }
+        gray1: "#171717",
+      },
+      backgroundImage: {
+        BGgray: "url('/public/bg-gray.png')",
+      },
     },
   },
-  plugins: [],
-}
+  // daisyui: {
+  //   themes: ["night"]
+  // },
+  // plugins: [require("daisyui")],
+};

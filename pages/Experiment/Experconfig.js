@@ -1,48 +1,101 @@
-import { React, useState }  from 'react';
-import Gmap from '../../component/Gmap';
-// import './experStyle.css'
+import { React, useState, useEffect } from "react";
+import Gmap from "../../component/Gmap";
+import { useForm } from "react-hook-form";
+import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 
-// import { BsChevronLeft } from 'react-icons/bs';
-import { MdDashboard } from 'react-icons/md';
+import { BsArrowBarLeft } from "react-icons/bs";
+import ExperC from "../../component/Experconfig/ExperC";
 
 function Experiment() {
+  const [open, setOpen] = useState(true);
 
-    const [open, setOpen] = useState(true)
+  // const { register, handleSubmit, getValues} = useForm({
+  //     defaultValues: {
+  //         link_level: '',
+  //         hop_select: '',
+  //         num_hop: '',
+  //         location_1: '',
+  //         location_2: ''
+  //     }
+  // });
+  // const onSubmit = (data) => {
+  //     console.log(data)
+  // }
 
-    return (
+  const [value, setValue] = useState({
+    link_level: "",
+    hop_select: "",
+    num_hop: "",
+    location_1: "",
+    location_2: "",
+    photon_loss: "",
+    dep: "",
+    gate_error: "",
+    coherent: "",
+    mea_error: "",
+    trajectory: "",
+  });
+  const [image, setImage] = useState("");
 
-        <div className='flex w-full h-100 bg-gray1 text-[#d1d5dc]'>
-            <Gmap />
-            <div className='flex z-50'>
-                <div className={`${open ? 'w-5/12' : 'w-5'} absolute right-0 duration-300 h-screen bg-[#262626]`}>
+  //   const [submit, setSubmit] = useState(false);
+  //   const [valid, setValid] = useState(false);
 
-                    <div className={`absolute cursor-pointer bottom-1/2 duration-300 ${open && 'rotate-[180deg]'}`} 
-                        onClick={()=>setOpen(!open)}>
-                        <MdDashboard />
-                    </div>
-                    {open ? 
+  //   const handleSubmit = (e) => {
+  //     e.preventDefault(); // prevent browser from refresh
+  //     if (
+  //       value.link_level &&
+  //       value.hop_select &&
+  //       value.num_hop &&
+  //       value.location_1 &&
+  //       value.location_2
+  //     ) {
+  //       setValid(true);
+  //     }
+  //     setSubmit(true);
+  //   };
 
-                    // Provide user form here
-                    <form>
-                        <label htmlFor="exper-select">Choose your experiment:</label>
-                        <br/>
-                        <select className='bg-[#171717]'>
-                            <option value={null}>1 exper</option>
-                            <option value={null}>2 exper</option>
-                            <option value={null}>3 exper</option>
-                            <option value={null}>4 exper</option>
-                            <option value={null}>5 exper</option>
-                        </select>
-                    </form>
-                    //
-                    
-                    : null}
-                </div>
+  useEffect(() => {
+    if (value.link_level == "0G") {
+      setImage("/mulogo.png");
+    } else if (value.link_level == "1G") {
+      setImage("/1G.png");
+    } else if (value.link_level == "2G-NCX") {
+      setImage("/2G-NCX.png");
+    } else if (value.link_level == "HG-DE") {
+      setImage("/HG-NCX.png");
+    } else if (value.link_level == "HG-E2E-PE") {
+      setImage("HG-E2E-PE");
+    }
+  }, [value.link_level]);
 
-            </div>
+  return (
+    <div className="flex w-full h-100 bg-gray1 text-[#d1d5dc]">
+      <Gmap />
+      <div className="flex z-50">
+        <div
+          className={`${
+            open ? "w-5/12" : "w-5"
+          } absolute right-0 duration-300 h-screen bg-gray1 overflow-hidden flex flex-col`}
+        >
+          <div
+            className={`absolute cursor-pointer bottom-1/2 duration-300 ${
+              open && "rotate-[180deg]"
+            }`}
+            onClick={() => setOpen(!open)}
+          >
+            <BsArrowBarLeft />
+          </div>
+          {open ? (
+
+            <ExperC />
+          ) : null}
         </div>
-
-    )
+      </div>
+    </div>
+  );
 }
 
 export default Experiment;
+
+{
+}
