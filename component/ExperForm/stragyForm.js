@@ -35,6 +35,7 @@ export function StragyForm({ value, setValue }) {
     }
   }, [value.link_level]);
 
+  // State need to send to firestore
   const [inputFields, setInputFields] = useState([
     { id: uuidv4(), location: "" },
   ]);
@@ -68,15 +69,11 @@ export function StragyForm({ value, setValue }) {
     setInputFields(values);
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  // };
-
   return (
     <form action="" className="w-full">
       <div className="flex space-x-2">
-        <h1 className="text-[#fff] text-4xl">Configure your </h1>
-        <h1 className="text-[#ad73f1] text-4xl">Qwanta network</h1>
+        <h1 className="text-[#fff] text-3xl">Configure your </h1>
+        <h1 className="text-[#ad73f1] text-3xl">Qwanta network</h1>
       </div>
       <p className="mt-5 mb-2 text-gray-400">Select Protocol</p>
       <select
@@ -133,9 +130,9 @@ export function StragyForm({ value, setValue }) {
               <input
                 type="text"
                 value={inputFields.location}
-                className="w-3/4 h-8 rounded-sm mb-1"
+                className="w-3/4 h-8 rounded-sm mb-1 text-black"
                 placeholder="repeater location"
-                onChange={(e) => handleChangeInput(index, event)}
+                onChange={(e) => handleChangeInput(index, e)}
               />
               <AiOutlinePlusCircle
                 className="ml-2 text-3xl"
@@ -168,7 +165,7 @@ export function StragyForm({ value, setValue }) {
       )}
 
       {/* {useEffect(() => {
-        console.log(value);
+        console.log(inputFields);
       })} */}
     </form>
   );

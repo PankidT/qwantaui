@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 
 import { BsArrowBarLeft } from "react-icons/bs";
-import ExperC from "../../component/Experconfig/ExperC";
+import ExperC from "../../component/ExperForm/ExperC";
 
 function Experiment() {
   const [open, setOpen] = useState(true);
@@ -85,10 +85,7 @@ function Experiment() {
           >
             <BsArrowBarLeft />
           </div>
-          {open ? (
-
-            <ExperC />
-          ) : null}
+          {open ? <ExperC /> : null}
         </div>
       </div>
     </div>
